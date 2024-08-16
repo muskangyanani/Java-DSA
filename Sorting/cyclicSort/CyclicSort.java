@@ -1,10 +1,11 @@
-package Sorting;
+package Sorting.cyclicSort;
 
 import java.util.Arrays;
 
+// for 0-n
 public class CyclicSort {
     public static void main(String[] args) {
-        int[] arr = { 4, 3, 2, 7, 8, 2, 3, 1 };
+        int[] arr = { 2, 1, 0 };
         sort(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -12,9 +13,8 @@ public class CyclicSort {
     static void sort(int[] arr) {
         int i = 0;
         while (i < arr.length) {
-            int correctIndex = arr[i] - 1;
-            if (i != correctIndex) {
-                swap(arr, i, correctIndex);
+            if (arr[i] < arr.length && arr[i] != i) {
+                swap(arr, i, arr[i]);
             } else {
                 i++;
             }

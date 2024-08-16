@@ -1,13 +1,12 @@
-package Sorting;
+package Sorting.cyclicSort;
 
 import java.util.ArrayList;
 // import java.util.Arrays;
 import java.util.List;
 
 public class FindMultipleMissingNumbers {
-
     public static void main(String[] args) {
-        int[] arr = { 1, 2 };
+        int[] arr = { 1, 2, 4 };
         System.out.println(findDisappearedNumbers(arr));
     }
 
