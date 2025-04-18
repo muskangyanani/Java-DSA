@@ -19,13 +19,23 @@ public class Main {
     
     
     // ===========Doubly LL================
-    DLL list = new DLL();
-    list.insertFirst(3);
-    list.insertFirst(2);
-    list.insertFirst(1);
-    list.insertLast(88);
-    list.insertAfter(2, 65);
-    list.insertAfter(88, 76);
+    // DLL list = new DLL();
+    // list.insertFirst(3);
+    // list.insertFirst(2);
+    // list.insertFirst(1);
+    // list.insertLast(88);
+    // list.insertAfter(2, 65);
+    // list.insertAfter(88, 76);
+    // list.display();
+
+
+    CLL list = new CLL();
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+    list.insert(5);
+    list.display();
+    list.delete(4);
     list.display();
   }
 }

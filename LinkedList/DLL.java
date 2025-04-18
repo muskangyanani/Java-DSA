@@ -1,5 +1,3 @@
-
-
 public class DLL {
 
   Node head;
