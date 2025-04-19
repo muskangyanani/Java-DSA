@@ -102,6 +102,23 @@ public class LinkedList1 {
     return null;
   }
 
+  // Insert using recursion
+  public void insertRec(int index, int value){
+    head = insertRec(index, value, head);
+  }
+  private Node insertRec(int index, int val, Node node){
+    if (node == null && index > 0) {
+      throw new NullPointerException("Index out of bounds for insertion.");
+    }
+    if(index == 0){
+      Node newNode = new Node(val, node);
+      size++;
+      return newNode;
+    }
+    node.next = insertRec(index - 1, val, node.next);
+    return node;
+  }
+
   public void display(){
     Node temp = head;
     while(temp != null){
