@@ -128,6 +128,24 @@ public class LinkedList1 {
     System.out.println("END");
   }
 
+  public void reverse(){
+    if(head == null || head.next == null) {
+      return;
+    }
+    
+    Node prev = null;
+    Node curr = head;
+    tail = head;
+    
+    while(curr != null){
+      Node next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+    head = prev;
+  }
+
   private class Node{
     private int value;
     private Node next;
